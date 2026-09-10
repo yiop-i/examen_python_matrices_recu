@@ -35,15 +35,16 @@ while True:
         print(f"El producto de todos los elementos de la matriz es: {productor}")
         respuesta=int(input(f"ingresa lo que queres hacer:\n 1) Cargar matriz.\n 2) Mostrar matriz.\n 3) Sumatoria.\n 4) Productoria.\n 5) Transpuesta.\n"))
     elif respuesta==5:
+        matriztras=[]
         for j in range(columnas):
             filatrans=[]
             for i in range(filas):
                 filatrans.append(matriz[i][j])
+            matriztras.append(filatrans)
+
         print("La matriz transpuesta es:")
-        for fila in filatrans:
-            for elemento in fila:
-                print(elemento, end=" ")
-            print()
+        for fila in matriztras:
+            print(fila)
         respuesta=int(input(f"ingresa lo que queres hacer:\n 1) Cargar matriz.\n 2) Mostrar matriz.\n 3) Sumatoria.\n 4) Productoria.\n 5) Transpuesta.\n"))
     else:
         print("Opcion invalida: Ingresa un número del 1 al 5, gil.")
